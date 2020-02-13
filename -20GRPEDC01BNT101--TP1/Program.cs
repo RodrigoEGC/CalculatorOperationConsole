@@ -76,7 +76,7 @@ namespace _20GRPEDC01BNT101__TP1
 
                     if (opp == "3")
                     {
-                        Console.WriteLine("Você selecionou a class Division");
+                        Console.WriteLine("Você selecionou a class Multiplication");
                         result = Mut.Operation(cleanNum1, cleanNum2, opp);
                         if (double.IsNaN(result))
                         {
