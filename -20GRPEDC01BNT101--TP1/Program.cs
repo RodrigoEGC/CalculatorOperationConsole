@@ -1,4 +1,7 @@
 ﻿using Addition;
+using Division;
+using Multiplication;
+using Subtration;
 using System;
 
 namespace _20GRPEDC01BNT101__TP1
@@ -38,10 +41,10 @@ namespace _20GRPEDC01BNT101__TP1
                 }
 
                 Console.WriteLine("Agora, escolha qual operação deseja realizar: ");
-                Console.WriteLine("\ta - Soma");
-                Console.WriteLine("\tb - Subração");
-                Console.WriteLine("\tc - Multiplicação");
-                Console.WriteLine("\td - Divisão");
+                Console.WriteLine("\t1 - Soma");
+                Console.WriteLine("\t2 - Subração");
+                Console.WriteLine("\t3 - Multiplicação");
+                Console.WriteLine("\t4 - Divisão");
                 Console.Write("Sua opção é ? ");
 
                 string opp = Console.ReadLine();
@@ -49,20 +52,43 @@ namespace _20GRPEDC01BNT101__TP1
 
                 try
                 {
-                    if (opp == "a")
+                    if (opp == "1")
                     {
+                        Console.WriteLine("Você usou a class Addtion");
                         result = Add.Operartion(cleanNum1, cleanNum2, opp);
+                        if (double.IsNaN(result))
+                        {
+                            Console.WriteLine("Esta operação resultou num erro.\n");
+                        }
+                        else Console.WriteLine("O resultado da operação é : {0:0.##}\n", result);
+                    }
+
+                    if (opp == "2")
+                    {
+                        Console.WriteLine("Você usou a class Subtration");
+                        result = Sub.Operation(cleanNum1, cleanNum2, opp);
+                        if (double.IsNaN(result))
+                        {
+                            Console.WriteLine("Esta operação resultou num erro.\n");
+                        }
+                        else Console.WriteLine("O resultado da operação é : {0:0.##}\n", result);
+                    }
+
+                    if (opp == "3")
+                    {
+                        Console.WriteLine("Você selecionou a class Division");
+                        result = Mut.Operation(cleanNum1, cleanNum2, opp);
                         if (double.IsNaN(result))
                         {
                             Console.WriteLine("Esta operação resulto num erro.\n");
                         }
                         else Console.WriteLine("O resultado da operação é : {0:0.##}\n", result);
                     }
-
-                    if (opp == "b") 
+                    
+                    if (opp == "4")
                     {
-                        Console.WriteLine("Você selecionou B");
-                        //result = Sub.Operation(cleanNum1, cleanNum2, opp);
+                        Console.WriteLine("Você selecionou a class Division");
+                        result = Div.Operation(cleanNum1, cleanNum2, opp);
                         if (double.IsNaN(result))
                         {
                             Console.WriteLine("Esta operação resulto num erro.\n");
@@ -74,14 +100,14 @@ namespace _20GRPEDC01BNT101__TP1
                 }
                 catch (Exception e)
                 {
-                    Console.WriteLine("Oh Não! An exception occurred trying to do the math.\n - Details: " + e.Message);
+                    Console.WriteLine("Oh Não! uma exceção ocorreu na operação.\n - Detalhes: " + e.Message);
                 }
 
                 Console.WriteLine("------------------------\n");
 
                 
-                Console.Write("Digite 'n' e logo em seguida, pressione Enter para fechar a aplicação, ou digite qualquer tecla, e pressione Enter para continuar: ");
-                if (Console.ReadLine() == "n") fimAplicacao = true;
+                Console.Write("Digite 's' e logo em seguida, pressione Enter para fechar a aplicação, ou digite qualquer tecla, e pressione Enter para continuar: ");
+                if (Console.ReadLine() == "s") fimAplicacao = true;
 
                 Console.WriteLine("\n");
             }

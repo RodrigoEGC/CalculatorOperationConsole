@@ -2,12 +2,14 @@
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
     <RootNamespace>_20GRPEDC01BNT101__TP1</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\Addition\Addition.csproj" />
+    <ProjectReference Include="..\Division\Division.csproj" />
+    <ProjectReference Include="..\Multiplication\Multiplication.csproj" />
     <ProjectReference Include="..\Subtration\Subtration.csproj" />
   </ItemGroup>
 

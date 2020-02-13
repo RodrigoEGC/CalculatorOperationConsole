@@ -13,7 +13,7 @@ namespace Addition
             double result = double.NaN;
             switch (opp)
             {
-                case "a" :
+                case "1" :
                 result = num1 + num2;
                     break;
             }
