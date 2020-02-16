@@ -11,7 +11,7 @@ namespace _20GRPEDC01BNT101__TP1
         static void Main(string[] args)
         {
             bool fimAplicacao = false;
-            Console.WriteLine("Calculadora em C#\r");
+            Console.WriteLine("Operações Matemáticas em C#\r");
             Console.WriteLine("------------------------\n");
 
             while (!fimAplicacao)
@@ -47,15 +47,15 @@ namespace _20GRPEDC01BNT101__TP1
                 Console.WriteLine("\t4 - Divisão");
                 Console.Write("Sua opção é ? ");
 
-                string opp = Console.ReadLine();
+                string option = Console.ReadLine();
 
 
                 try
                 {
-                    if (opp == "1")
+                    if (option == "1")
                     {
                         Console.WriteLine("Você usou a class Addtion");
-                        result = Add.Operartion(cleanNum1, cleanNum2, opp);
+                        result = Add.Operartion(cleanNum1, cleanNum2, option);
                         if (double.IsNaN(result))
                         {
                             Console.WriteLine("Esta operação resultou num erro.\n");
@@ -63,10 +63,10 @@ namespace _20GRPEDC01BNT101__TP1
                         else Console.WriteLine("O resultado da operação é : {0:0.##}\n", result);
                     }
 
-                    if (opp == "2")
+                    if (option == "2")
                     {
                         Console.WriteLine("Você usou a class Subtration");
-                        result = Sub.Operation(cleanNum1, cleanNum2, opp);
+                        result = Sub.Operation(cleanNum1, cleanNum2, option);
                         if (double.IsNaN(result))
                         {
                             Console.WriteLine("Esta operação resultou num erro.\n");
@@ -74,10 +74,10 @@ namespace _20GRPEDC01BNT101__TP1
                         else Console.WriteLine("O resultado da operação é : {0:0.##}\n", result);
                     }
 
-                    if (opp == "3")
+                    if (option == "3")
                     {
                         Console.WriteLine("Você selecionou a class Multiplication");
-                        result = Mut.Operation(cleanNum1, cleanNum2, opp);
+                        result = Mut.Operation(cleanNum1, cleanNum2, option);
                         if (double.IsNaN(result))
                         {
                             Console.WriteLine("Esta operação resulto num erro.\n");
@@ -85,10 +85,10 @@ namespace _20GRPEDC01BNT101__TP1
                         else Console.WriteLine("O resultado da operação é : {0:0.##}\n", result);
                     }
                     
-                    if (opp == "4")
+                    if (option == "4")
                     {
                         Console.WriteLine("Você selecionou a class Division");
-                        result = Div.Operation(cleanNum1, cleanNum2, opp);
+                        result = Div.Operation(cleanNum1, cleanNum2, option);
                         if (double.IsNaN(result))
                         {
                             Console.WriteLine("Esta operação resulto num erro.\n");

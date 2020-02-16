@@ -8,15 +8,13 @@ namespace Multiplication
         {
         
         }
-        public static double Operation(double num1, double num2, string opp)
+        public static double Operation(double num1, double num2, string option)
         {
 
             double result = double.NaN;
-            switch (opp)
-            {
-                case "3":
-                    result = num1 * num2;
-                    break;
+            if (option == "3")
+            { 
+                result = num1 * num2;
             }
             return result;
         }

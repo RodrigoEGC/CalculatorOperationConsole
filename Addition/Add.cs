@@ -8,14 +8,13 @@ namespace Addition
         {
 
         }
-        public static double Operartion(double num1, double num2, string opp)
+        public static double Operartion(double num1, double num2, string option)
         {
             double result = double.NaN;
-            switch (opp)
+            if (option == "1")
             {
-                case "1" :
+                
                 result = num1 + num2;
-                    break;
             }
             return result;
         }
